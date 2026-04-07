@@ -15,6 +15,11 @@ class PrayerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final parts = prayer.time.split(':');
+    final hour = int.parse(parts[0]);
+    final minute = int.parse(parts[1]);
+    final formattedDisplayTime = TimeOfDay(hour: hour, minute: minute).format(context);
+
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 8),
       child: Padding(
@@ -33,7 +38,7 @@ class PrayerCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Scheduled for ${prayer.time}',
+                    'Scheduled for $formattedDisplayTime',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: Colors.grey[600],
                         ),
@@ -46,13 +51,15 @@ class PrayerCard extends StatelessWidget {
                 IconButton(
                   icon: const Icon(Icons.access_time),
                   onPressed: () async {
-                    final parts = prayer.time.split(':');
-                    final hour = int.parse(parts[0]);
-                    final minute = int.parse(parts[1]);
-
                     final TimeOfDay? newTime = await showTimePicker(
                       context: context,
                       initialTime: TimeOfDay(hour: hour, minute: minute),
+                      builder: (context, child) {
+                        return MediaQuery(
+                          data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: false),
+                          child: child!,
+                        );
+                      },
                     );
 
                     if (newTime != null) {

@@ -19,7 +19,7 @@ class TimerController extends ChangeNotifier {
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       final now = DateTime.now();
-      _currentTime = DateFormat('HH:mm:ss').format(now);
+      _currentTime = DateFormat('hh:mm:ss a').format(now);
       
       _updateCountdown(now);
       
