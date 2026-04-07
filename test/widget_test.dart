@@ -1,30 +1,36 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:window_lock_prayer/main.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:window_lock_prayer/app.dart';
+import 'package:window_lock_prayer/controllers/prayer_controller.dart';
+import 'package:window_lock_prayer/services/storage_service.dart';
+import 'package:window_lock_prayer/services/notification_service.dart';
+import 'package:window_lock_prayer/services/windows_sleep_service.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('App basic load test', (WidgetTester tester) async {
+    // Setup mock dependencies
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+    final storageService = StorageService(prefs);
+    final notificationService = NotificationService();
+    final sleepService = WindowsSleepService();
+
+    final prayerController = PrayerController(
+      storageService,
+      notificationService,
+      sleepService,
+    );
+
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(
+      ChangeNotifierProvider.value(
+        value: prayerController,
+        child: const PrayerApp(),
+      ),
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify app title exists
+    expect(find.text('Prayer Time Sleep Assistant'), findsOneWidget);
   });
 }

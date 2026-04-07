@@ -1,0 +1,531 @@
+[ +221 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[   +1 ms] executing: [C:\Users\Amar\develop\flutter/] git -c log.showSignature=false log HEAD -n 1 --pretty=format:%ad --date=iso
+[ +108 ms] Exit code 0 from: git -c log.showSignature=false log HEAD -n 1 --pretty=format:%ad --date=iso
+[        ] 2026-03-25 16:21:00 -0700
+[  +47 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +5 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[ +143 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +8 ms] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +95 ms] Skipping pub get: version match.
+[ +127 ms] Found plugin window_manager at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\window_manager-0.3.9\
+[  +10 ms] Found plugin screen_retriever at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\screen_retriever-0.1.9\
+[   +4 ms] Found plugin system_tray at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\system_tray-2.0.3\
+[  +12 ms] Found plugin shared_preferences at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences-2.5.5\
+[   +4 ms] Found plugin shared_preferences_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_windows-2.4.1\
+[  +14 ms] Found plugin path_provider_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_windows-2.3.0\
+[  +18 ms] Found plugin shared_preferences_web at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_web-2.4.3\
+[   +8 ms] Found plugin shared_preferences_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_linux-2.4.1\
+[   +5 ms] Found plugin path_provider_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_linux-2.2.1\
+[   +5 ms] Found plugin shared_preferences_foundation at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_foundation-2.5.6\
+[   +3 ms] Found plugin shared_preferences_android at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.23\
+[  +25 ms] Found plugin local_notifier at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\local_notifier-0.1.6\
+[   +7 ms] Found plugin flutter_local_notifications at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications-16.3.3\
+[  +10 ms] Found plugin flutter_local_notifications_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications_linux-4.0.1\
+[ +110 ms] Found plugin window_manager at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\window_manager-0.3.9\
+[   +3 ms] Found plugin screen_retriever at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\screen_retriever-0.1.9\
+[   +2 ms] Found plugin system_tray at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\system_tray-2.0.3\
+[  +11 ms] Found plugin shared_preferences at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences-2.5.5\
+[   +3 ms] Found plugin shared_preferences_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_windows-2.4.1\
+[   +8 ms] Found plugin path_provider_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_windows-2.3.0\
+[  +16 ms] Found plugin shared_preferences_web at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_web-2.4.3\
+[   +8 ms] Found plugin shared_preferences_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_linux-2.4.1\
+[   +3 ms] Found plugin path_provider_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_linux-2.2.1\
+[   +4 ms] Found plugin shared_preferences_foundation at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_foundation-2.5.6\
+[   +2 ms] Found plugin shared_preferences_android at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.23\
+[  +15 ms] Found plugin local_notifier at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\local_notifier-0.1.6\
+[   +7 ms] Found plugin flutter_local_notifications at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications-16.3.3\
+[   +7 ms] Found plugin flutter_local_notifications_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications_linux-4.0.1\
+[  +41 ms] Skipping generating web_plugin_registrant.dart because it is up-to-date.
+[  +85 ms] Found plugin window_manager at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\window_manager-0.3.9\
+[   +2 ms] Found plugin screen_retriever at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\screen_retriever-0.1.9\
+[   +3 ms] Found plugin system_tray at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\system_tray-2.0.3\
+[  +11 ms] Found plugin shared_preferences at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences-2.5.5\
+[   +2 ms] Found plugin shared_preferences_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_windows-2.4.1\
+[   +9 ms] Found plugin path_provider_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_windows-2.3.0\
+[  +10 ms] Found plugin shared_preferences_web at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_web-2.4.3\
+[   +8 ms] Found plugin shared_preferences_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_linux-2.4.1\
+[   +3 ms] Found plugin path_provider_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_linux-2.2.1\
+[   +5 ms] Found plugin shared_preferences_foundation at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_foundation-2.5.6\
+[   +3 ms] Found plugin shared_preferences_android at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.23\
+[  +19 ms] Found plugin local_notifier at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\local_notifier-0.1.6\
+[   +5 ms] Found plugin flutter_local_notifications at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications-16.3.3\
+[   +9 ms] Found plugin flutter_local_notifications_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications_linux-4.0.1\
+[  +21 ms] Generating D:\APP-Project\window_lock_prayer\android\app\src\main\java\io\flutter\plugins\GeneratedPluginRegistrant.java
+[   +3 ms] Skipping generating GeneratedPluginRegistrant.java because it is up-to-date.
+[  +12 ms] Skipping generating generated_plugin_registrant.h because it is up-to-date.
+[   +2 ms] Skipping generating generated_plugin_registrant.cc because it is up-to-date.
+[   +2 ms] Skipping generating generated_plugins.cmake because it is up-to-date.
+[   +3 ms] Skipping generating generated_plugin_registrant.h because it is up-to-date.
+[   +4 ms] Skipping generating generated_plugin_registrant.cc because it is up-to-date.
+[   +3 ms] Skipping generating generated_plugins.cmake because it is up-to-date.
+[   +4 ms] Skipping generating GeneratedPluginRegistrant.h because it is up-to-date.
+[   +2 ms] Skipping generating GeneratedPluginRegistrant.m because it is up-to-date.
+[   +2 ms] Skipping generating GeneratedPluginRegistrant.swift because it is up-to-date.
+[ +353 ms] Initializing file store
+[   +2 ms] Done initializing file store
+[  +18 ms] Skipping target: gen_localizations
+[   +4 ms] gen_dart_plugin_registrant: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: D:\APP-Project\window_lock_prayer\.dart_tool\package_config.json,D:\APP-Project\window_lock_prayer\.dart_tool\flutter_build\dart_plugin_registrant.dart}
+[  +87 ms] Found plugin window_manager at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\window_manager-0.3.9\
+[   +4 ms] Found plugin screen_retriever at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\screen_retriever-0.1.9\
+[   +2 ms] Found plugin system_tray at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\system_tray-2.0.3\
+[   +6 ms] Found plugin shared_preferences at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences-2.5.5\
+[   +2 ms] Found plugin shared_preferences_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_windows-2.4.1\
+[   +5 ms] Found plugin path_provider_windows at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_windows-2.3.0\
+[   +7 ms] Found plugin shared_preferences_web at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_web-2.4.3\
+[   +6 ms] Found plugin shared_preferences_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_linux-2.4.1\
+[   +2 ms] Found plugin path_provider_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_linux-2.2.1\
+[  +28 ms] Found plugin shared_preferences_foundation at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_foundation-2.5.6\
+[   +5 ms] Found plugin shared_preferences_android at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\shared_preferences_android-2.4.23\
+[  +16 ms] Found plugin local_notifier at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\local_notifier-0.1.6\
+[   +3 ms] Found plugin flutter_local_notifications at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications-16.3.3\
+[   +5 ms] Found plugin flutter_local_notifications_linux at C:\Users\Amar\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_local_notifications_linux-4.0.1\
+[  +16 ms] Skipping generating dart_plugin_registrant.dart because it is up-to-date.
+[        ] gen_dart_plugin_registrant: Complete
+[   +5 ms] Skipping target: _composite
+[   +2 ms] complete
+[   +7 ms] Launching lib\main.dart on Windows in debug mode...
+[   +7 ms] C:\Users\Amar\develop\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe C:\Users\Amar\develop\flutter\bin\cache\dart-sdk\bin\snapshots\frontend_server_aot.dart.snapshot --sdk-root C:\Users\Amar\develop\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/ --incremental --target=flutter --experimental-emit-debug-metadata -DFLUTTER_VERSION=3.41.6 -DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_URL=https://github.com/flutter/flutter.git -DFLUTTER_FRAMEWORK_REVISION=db50e20168 -DFLUTTER_ENGINE_REVISION=425cfb54d0 -DFLUTTER_DART_VERSION=3.11.4 --output-dill C:\Users\Amar\AppData\Local\Temp\flutter_tools.c7d907a\flutter_tool.f70580da\app.dill --packages D:\APP-Project\window_lock_prayer\.dart_tool\package_config.json -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation --filesystem-scheme org-dartlang-root --initialize-from-dill build\b70f9274ac3b5ec9754be8774a3c9a1c.cache.dill.track.dill --source file:///D:/APP-Project/window_lock_prayer/.dart_tool/flutter_build/dart_plugin_registrant.dart --source package:flutter/src/dart_plugin_registrant.dart -Dflutter.dart_plugin_registrant=file:///D:/APP-Project/window_lock_prayer/.dart_tool/flutter_build/dart_plugin_registrant.dart --verbosity=error --enable-experiment=alternative-invalidation-strategy
+[  +52 ms] executing: C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -format json -products * -utf8 -latest -version 16 -requires Microsoft.VisualStudio.Workload.NativeDesktop Microsoft.VisualStudio.Component.VC.Tools.x86.x64 Microsoft.VisualStudio.Component.VC.CMake.Project
+[ +200 ms] Exit code 0 from: C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -format json -products * -utf8 -latest -version 16 -requires Microsoft.VisualStudio.Workload.NativeDesktop Microsoft.VisualStudio.Component.VC.Tools.x86.x64 Microsoft.VisualStudio.Component.VC.CMake.Project
+[        ] [
+             {
+               "instanceId": "80100a4e",
+               "installDate": "2026-01-20T19:36:48Z",
+               "installationName": "VisualStudio/18.2.1+11415.280",
+               "installationPath": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community",
+               "installationVersion": "18.2.11415.280",
+               "productId": "Microsoft.VisualStudio.Product.Community",
+               "productPath": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\devenv.exe",
+               "state": 4294967295,
+               "isComplete": true,
+               "isLaunchable": true,
+               "isPrerelease": false,
+               "isRebootRequired": false,
+               "displayName": "Visual Studio Community 2026",
+               "description": "Everything you need to build modern apps – free for you, built for impact.",
+               "channelId": "VisualStudio.18.Release",
+               "channelUri": "https://aka.ms/vs/18/stable/channel",
+               "enginePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\resources\\app\\ServiceHub\\Services\\Microsoft.VisualStudio.Setup.Service",
+               "expirationDate": "2026-04-15T17:00:00+00:00",
+               "installedChannelId": "VisualStudio.18.Release",
+               "installedChannelUri": "https://aka.ms/vs/18/stable/channel",
+               "releaseNotes": "https://docs.microsoft.com/en-us/visualstudio/releases/18/release-notes-v18.2#18.2.1",
+               "resolvedInstallationPath": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community",
+               "retirementDate": "2026-07-14T17:00:00+00:00",
+               "thirdPartyNotices": "https://go.microsoft.com/fwlink/?LinkId=661480",
+               "updateDate": "2026-02-05T15:39:54.4171146Z",
+               "catalog": {
+                 "buildBranch": "d18.0",
+                 "buildVersion": "18.2.11415.280",
+                 "featureReleaseMonth": "01",
+                 "featureReleaseYear": "2026",
+                 "id": "VisualStudio/18.2.1+11415.280",
+                 "includeBuildVersionInDisplayVersion": "False",
+                 "localBuild": "build-lab",
+                 "manifestName": "VisualStudio",
+                 "manifestType": "installer",
+                 "productDisplayVersion": "18.2.1",
+                 "productLine": "Dev18",
+                 "productLineVersion": "18",
+                 "productMilestone": "RTW",
+                 "productMilestoneIsPreRelease": "False",
+                 "productName": "Visual Studio",
+                 "productPatchVersion": "1",
+                 "productPreReleaseMilestoneSuffix": "1.0",
+                 "productRelease": "RTW",
+                 "productSemanticVersion": "18.2.1+11415.280",
+                 "requiredEngineVersion": "4.0.2168.39045"
+               },
+               "properties": {
+                 "appLocalWPF": "false",
+                 "campaignId": "2500:31f85e38031e4637b92cf1be674a842d",
+                 "channelManifestId": "VisualStudio.18.Release/18.2.1+11415.280",
+                 "includeRecommended": "1",
+                 "nickname": "",
+                 "setupEngineFilePath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe"
+               }
+             }
+           ]
+[   +9 ms] Building Windows application...
+[  +71 ms] <- compile package:window_lock_prayer/main.dart
+[   +1 ms] executing: C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -S D:\APP-Project\window_lock_prayer\windows -B D:\APP-Project\window_lock_prayer\build\windows\x64 -G Visual Studio 18 2026 -A x64 -DFLUTTER_TARGET_PLATFORM=windows-x64
+[ +688 ms] -- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+[  +59 ms] -- Configuring done (0.1s)
+[+7796 ms] -- Generating done (7.7s)
+[ +119 ms] -- Build files have been written to: D:/APP-Project/window_lock_prayer/build/windows/x64
+[ +370 ms] executing: C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --build D:\APP-Project\window_lock_prayer\build\windows\x64 --config Debug --target INSTALL --verbose
+[ +484 ms] Change Dir: 'D:/APP-Project/window_lock_prayer/build/windows/x64'
+[   +1 ms] Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" INSTALL.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+[ +311 ms] MSBuild version 18.0.5+e22287bf1 for .NET Framework
+[ +763 ms] Build started 4/4/2026 8:33:14 AM.
+[+1194 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj" on node 1 (default targets).
+[   +1 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj" (1) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+[        ] PrepareForBuild:
+[   +1 ms]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +9 ms] InitializeBuildStatus:
+[        ]   Creating "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+[  +48 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[ +113 ms] FinalizeBuildStatus:
+[        ]   Deleting file "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+[  +97 ms]   Touching "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+[   +2 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ZERO_CHECK.vcxproj" (default targets).
+[ +307 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj" (1) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (3) on node 1 (default targets).
+[        ] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (3) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\flutter_wrapper_app.vcxproj" (4) on node 1 (default targets).
+[        ] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\flutter_wrapper_app.vcxproj" (4) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\flutter_assemble.vcxproj" (5) on node 1 (default targets).
+[        ] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +6 ms] InitializeBuildStatus:
+[        ]   Touching "x64\Debug\flutter_assemble\flutter_assemble.tlog\unsuccessfulbuild".
+[ +121 ms] CustomBuild:
+[        ]   "The build of 'D:\APP-Project\window_lock_prayer\build\windows\x64\CMakeFiles\619edde0ccc22af863e0a742366023d0\flutter_assemble.rule' depends on 'D:\APP-PROJECT\WINDOW_LOCK_PRAYER\WINDOWS\FLUTTER\EPHEMERAL\FLUTTER_WINDOWS.DLL' which is produced by the build of 'D:\APP-Project\window_lock_prayer\build\windows\x64\CMakeFiles\6f2e941e3a04732aff668e31793c18bb\flutter_windows.dll.rule'. The items cannot be built in parallel."
+[ +393 ms]   Generating D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/flutter_windows.dll, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/flutter_export.h, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/flutter_windows.h, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/flutter_messenger.h, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/flutter_plugin_registrar.h, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/flutter_texture_registrar.h, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc, D:/APP-Project/window_lock_prayer/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc, _phony_
+[+9345 ms]   [ +321 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[   +1 ms]   [   +4 ms] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +1 ms]   [   +3 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[   +1 ms]   [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +1 ms]   [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms]   [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[   +1 ms]   [   +2 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ]   [   +2 ms] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ]   [   +2 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +1 ms]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +1 ms]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [  +19 ms] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[  +21 ms]   [  +34 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[   +2 ms]   [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +7 ms]   [  +11 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +6 ms]   [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[   +1 ms]   [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ]   [   +3 ms] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[ +234 ms]   [ +239 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[   +2 ms]   [        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[   +2 ms]   [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ]   [   +1 ms] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[  +13 ms]   [  +13 ms] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +1 ms]   [   +1 ms] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +3 ms]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ]   [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[   +5 ms]   [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[   +1 ms]   [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[ +121 ms]   [ +134 ms] Initializing file store
+[  +61 ms]   [  +61 ms] Done initializing file store
+[ +227 ms]   [ +225 ms] Skipping target: dart_build
+[   +9 ms]   [  +11 ms] Skipping target: gen_dart_plugin_registrant
+[+9401 ms]   [+9402 ms] Skipping target: unpack_windows
+[   +3 ms]   [   +3 ms] Skipping target: install_code_assets
+[        ]   [        ] Skipping target: gen_localizations
+[+2701 ms]   [+2700 ms] Skipping target: kernel_snapshot_program
+[ +622 ms]   [ +622 ms] Skipping target: debug_bundle_windows-x64_assets
+[        ]   [   +1 ms] Persisting file store
+[  +23 ms]   [  +22 ms] Done persisting file store
+[  +33 ms]   [  +33 ms] build succeeded.
+[        ]   [        ] "flutter assemble" took 13,533ms.
+[ +259 ms]   [ +258 ms] Running 1 shutdown hook
+[   +8 ms]   [   +8 ms] Shutdown hooks complete
+[ +256 ms]   [ +257 ms] exiting with code 0
+[ +409 ms] FinalizeBuildStatus:
+[        ]   Touching "x64\Debug\flutter_assemble\flutter_assemble.tlog\flutter_assemble.lastbuildstate".
+[        ] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\flutter_assemble.vcxproj" (default targets).
+[  +11 ms] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +2 ms] InitializeBuildStatus:
+[        ]   Creating "flutter_wrapper_app.dir\Debug\flutter_.84F2C401.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "flutter_wrapper_app.dir\Debug\flutter_.84F2C401.tlog\unsuccessfulbuild".
+[   +3 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +91 ms] ClCompile:
+[        ]   All outputs are up-to-date.
+[  +41 ms] Lib:
+[        ]   All outputs are up-to-date.
+[   +3 ms]   flutter_wrapper_app.vcxproj -> D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\Debug\flutter_wrapper_app.lib
+[  +26 ms] FinalizeBuildStatus:
+[        ]   Deleting file "flutter_wrapper_app.dir\Debug\flutter_.84F2C401.tlog\unsuccessfulbuild".
+[  +47 ms]   Touching "flutter_wrapper_app.dir\Debug\flutter_.84F2C401.tlog\flutter_wrapper_app.lastbuildstate".
+[   +1 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\flutter_wrapper_app.vcxproj" (default targets).
+[  +58 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (3) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\flutter_wrapper_plugin.vcxproj" (6) on node 1 (default targets).
+[        ] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +3 ms] InitializeBuildStatus:
+[        ]   Creating "flutter_wrapper_plugin.dir\Debug\flutter_.FC34BB64.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "flutter_wrapper_plugin.dir\Debug\flutter_.FC34BB64.tlog\unsuccessfulbuild".
+[   +5 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +25 ms] ClCompile:
+[        ]   All outputs are up-to-date.
+[   +9 ms] Lib:
+[        ]   All outputs are up-to-date.
+[        ]   flutter_wrapper_plugin.vcxproj -> D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\Debug\flutter_wrapper_plugin.lib
+[  +18 ms] FinalizeBuildStatus:
+[        ]   Deleting file "flutter_wrapper_plugin.dir\Debug\flutter_.FC34BB64.tlog\unsuccessfulbuild".
+[  +51 ms]   Touching "flutter_wrapper_plugin.dir\Debug\flutter_.FC34BB64.tlog\flutter_wrapper_plugin.lastbuildstate".
+[   +1 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\flutter\flutter_wrapper_plugin.vcxproj" (default targets).
+[  +68 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (3) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\local_notifier\local_notifier_plugin.vcxproj" (7) on node 1 (default targets).
+[        ] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +5 ms] InitializeBuildStatus:
+[        ]   Creating "local_notifier_plugin.dir\Debug\local_no.5913D0BD.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "local_notifier_plugin.dir\Debug\local_no.5913D0BD.tlog\unsuccessfulbuild".
+[   +4 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +23 ms] ClCompile:
+[        ]   All outputs are up-to-date.
+[  +58 ms] Link:
+[        ]   All outputs are up-to-date.
+[   +6 ms]   local_notifier_plugin.vcxproj -> D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\local_notifier\Debug\local_notifier_plugin.dll
+[  +15 ms] FinalizeBuildStatus:
+[        ]   Deleting file "local_notifier_plugin.dir\Debug\local_no.5913D0BD.tlog\unsuccessfulbuild".
+[  +51 ms]   Touching "local_notifier_plugin.dir\Debug\local_no.5913D0BD.tlog\local_notifier_plugin.lastbuildstate".
+[   +1 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\local_notifier\local_notifier_plugin.vcxproj" (default targets).
+[  +75 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (3) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\screen_retriever\screen_retriever_plugin.vcxproj" (8) on node 1 (default targets).
+[        ] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +3 ms] InitializeBuildStatus:
+[        ]   Creating "screen_retriever_plugin.dir\Debug\screen_r.58A1E864.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "screen_retriever_plugin.dir\Debug\screen_r.58A1E864.tlog\unsuccessfulbuild".
+[   +5 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +16 ms] ClCompile:
+[        ]   All outputs are up-to-date.
+[  +12 ms] Link:
+[        ]   All outputs are up-to-date.
+[   +1 ms]   screen_retriever_plugin.vcxproj -> D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\screen_retriever\Debug\screen_retriever_plugin.dll
+[  +20 ms] FinalizeBuildStatus:
+[        ]   Deleting file "screen_retriever_plugin.dir\Debug\screen_r.58A1E864.tlog\unsuccessfulbuild".
+[  +54 ms]   Touching "screen_retriever_plugin.dir\Debug\screen_r.58A1E864.tlog\screen_retriever_plugin.lastbuildstate".
+[   +1 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\screen_retriever\screen_retriever_plugin.vcxproj" (default targets).
+[  +58 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (3) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\system_tray\system_tray_plugin.vcxproj" (9) on node 1 (default targets).
+[        ] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +3 ms] InitializeBuildStatus:
+[        ]   Creating "system_tray_plugin.dir\Debug\system_t.3340C809.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "system_tray_plugin.dir\Debug\system_t.3340C809.tlog\unsuccessfulbuild".
+[   +4 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +22 ms] ClCompile:
+[        ]   All outputs are up-to-date.
+[  +19 ms] Link:
+[        ]   All outputs are up-to-date.
+[   +2 ms]   system_tray_plugin.vcxproj -> D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\system_tray\Debug\system_tray_plugin.dll
+[  +20 ms] FinalizeBuildStatus:
+[        ]   Deleting file "system_tray_plugin.dir\Debug\system_t.3340C809.tlog\unsuccessfulbuild".
+[  +51 ms]   Touching "system_tray_plugin.dir\Debug\system_t.3340C809.tlog\system_tray_plugin.lastbuildstate".
+[   +1 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\system_tray\system_tray_plugin.vcxproj" (default targets).
+[  +98 ms] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (3) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\runner\window_lock_prayer.vcxproj" (10) on node 1 (default targets).
+[        ] Project "D:\APP-Project\window_lock_prayer\build\windows\x64\runner\window_lock_prayer.vcxproj" (10) is building "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\window_manager\window_manager_plugin.vcxproj" (11) on node 1 (default targets).
+[        ] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +2 ms] InitializeBuildStatus:
+[        ]   Creating "window_manager_plugin.dir\Debug\window_m.A2B271BF.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "window_manager_plugin.dir\Debug\window_m.A2B271BF.tlog\unsuccessfulbuild".
+[   +5 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +17 ms] ClCompile:
+[        ]   All outputs are up-to-date.
+[  +17 ms] Link:
+[        ]   All outputs are up-to-date.
+[   +1 ms]   window_manager_plugin.vcxproj -> D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\window_manager\Debug\window_manager_plugin.dll
+[  +18 ms] FinalizeBuildStatus:
+[        ]   Deleting file "window_manager_plugin.dir\Debug\window_m.A2B271BF.tlog\unsuccessfulbuild".
+[  +67 ms]   Touching "window_manager_plugin.dir\Debug\window_m.A2B271BF.tlog\window_manager_plugin.lastbuildstate".
+[   +3 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\plugins\window_manager\window_manager_plugin.vcxproj" (default targets).
+[  +41 ms] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +4 ms] InitializeBuildStatus:
+[        ]   Creating "window_lock_prayer.dir\Debug\window_l.5F7FA20A.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "window_lock_prayer.dir\Debug\window_l.5F7FA20A.tlog\unsuccessfulbuild".
+[   +5 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +45 ms] ClCompile:
+[        ]   All outputs are up-to-date.
+[  +20 ms] ResourceCompile:
+[        ]   All outputs are up-to-date.
+[  +30 ms] Link:
+[        ]   All outputs are up-to-date.
+[   +3 ms]   window_lock_prayer.vcxproj -> D:\APP-Project\window_lock_prayer\build\windows\x64\runner\Debug\window_lock_prayer.exe
+[  +33 ms] FinalizeBuildStatus:
+[        ]   Deleting file "window_lock_prayer.dir\Debug\window_l.5F7FA20A.tlog\unsuccessfulbuild".
+[  +67 ms]   Touching "window_lock_prayer.dir\Debug\window_l.5F7FA20A.tlog\window_lock_prayer.lastbuildstate".
+[   +1 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\runner\window_lock_prayer.vcxproj" (default targets).
+[  +21 ms] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +5 ms] InitializeBuildStatus:
+[        ]   Creating "x64\Debug\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[        ]   Touching "x64\Debug\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild".
+[   +6 ms] CustomBuild:
+[        ]   All outputs are up-to-date.
+[  +24 ms] FinalizeBuildStatus:
+[        ]   Deleting file "x64\Debug\ALL_BUILD\ALL_BUILD.tlog\unsuccessfulbuild".
+[  +67 ms]   Touching "x64\Debug\ALL_BUILD\ALL_BUILD.tlog\ALL_BUILD.lastbuildstate".
+[   +2 ms] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\ALL_BUILD.vcxproj" (default targets).
+[  +10 ms] PrepareForBuild:
+[        ]   Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+[   +4 ms] InitializeBuildStatus:
+[        ]   Touching "x64\Debug\INSTALL\INSTALL.tlog\unsuccessfulbuild".
+[ +123 ms] CustomBuild:
+[        ]   1>
+[ +148 ms] PostBuildEvent:
+[        ]   setlocal
+[        ]   "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=Debug -P cmake_install.cmake
+[        ]   if %errorlevel% neq 0 goto :cmEnd
+[        ]   :cmEnd
+[        ]   endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+[        ]   :cmErrorLevel
+[        ]   exit /b %1
+[        ]   :cmDone
+[        ]   if %errorlevel% neq 0 goto :VCEnd
+[        ]   :VCEnd
+[ +173 ms]   -- Install configuration: "Debug"
+[   +7 ms]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/icudtl.dat
+[        ]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/flutter_windows.dll
+[   +1 ms]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/local_notifier_plugin.dll
+[        ]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/screen_retriever_plugin.dll
+[        ]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/system_tray_plugin.dll
+[        ]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/window_manager_plugin.dll
+[        ]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug
+[ +925 ms]   -- Up-to-date: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/flutter_assets
+[   +1 ms]   -- Installing: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+[   +6 ms]   -- Installing: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+[   +6 ms]   -- Installing: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/flutter_assets/fonts
+[   +4 ms]   -- Installing: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+[  +32 ms]   -- Installing: D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+[  +31 ms]   CMake Error at cmake_install.cmake:276 (file):
+[        ]     file INSTALL cannot copy file
+[        ]     "D:/APP-Project/window_lock_prayer/build//flutter_assets/kernel_blob.bin"
+[        ]     to
+[        ]     "D:/APP-Project/window_lock_prayer/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin":
+[        ]     Invalid argument.
+[ +122 ms] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: The command "setlocal [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[   +1 ms] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=Debug -P cmake_install.cmake [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmEnd [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmErrorLevel [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: exit /b %1 [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmDone [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :VCEnd [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :VCEnd" exited with code 1. [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] Done Building Project "D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj" (default targets) -- FAILED.
+[   +2 ms] Build FAILED.
+[  +14 ms] "D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj" (default target) (1) ->
+[        ] (PostBuildEvent target) -> 
+[        ]   C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: The command "setlocal [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=Debug -P cmake_install.cmake [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :cmEnd [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmEnd [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmErrorLevel [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: exit /b %1 [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :cmDone [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: if %errorlevel% neq 0 goto :VCEnd [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ] C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :VCEnd" exited with code 1. [D:\APP-Project\window_lock_prayer\build\windows\x64\INSTALL.vcxproj]
+[        ]     0 Warning(s)
+[        ]     1 Error(s)
+[        ] Time Elapsed 00:00:29.44
+[  +44 ms] Building Windows application... (completed in 40.1s)
+[        ] Error: Build process failed.
+[   +1 ms] "flutter run" took 42,027ms.
+[  +98 ms] 
+           #0      throwToolExit (package:flutter_tools/src/base/common.dart:34:3)
+           #1      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:910:9)
+           <asynchronous suspension>
+           #2      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1590:27)
+           <asynchronous suspension>
+           #3      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #4      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+           <asynchronous suspension>
+           #5      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:496:9)
+           <asynchronous suspension>
+           #6      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #7      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:431:5)
+           <asynchronous suspension>
+           #8      FlutterCommandRunner.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:307:33)
+           <asynchronous suspension>
+           #9      run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:104:11)
+           <asynchronous suspension>
+           #10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #11     main (package:flutter_tools/executable.dart:103:3)
+           <asynchronous suspension>
+
+
+[        ] Running 3 shutdown hooks
+[ +719 ms] Shutdown hooks complete
+[ +268 ms] exiting with code 1
