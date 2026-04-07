@@ -23,7 +23,8 @@ class PrayerApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: AppConstants.appName,
-        theme: AppTheme.lightTheme,
+        theme: AppTheme.darkTheme,
+        themeMode: ThemeMode.dark,
         home: const HomeScreen(),
         debugShowCheckedModeBanner: false,
       ),

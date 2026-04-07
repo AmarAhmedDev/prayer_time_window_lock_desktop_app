@@ -16,16 +16,31 @@ class HomeScreen extends StatelessWidget {
     final prayerController = Provider.of<PrayerController>(context);
     final timerController = Provider.of<TimerController>(context);
 
-    return Scaffold(
-      body: Row(
-        children: [
-          // Sidebar / Left Section
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: Theme.of(context).colorScheme.surfaceContainerHighest.withOpacity(0.3),
-              padding: const EdgeInsets.all(24.0),
-              child: Column(
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/bg.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Row(
+          children: [
+            // Sidebar / Left Section
+            Expanded(
+              flex: 2,
+              child: Container(
+                padding: const EdgeInsets.all(24.0),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.25),
+                  border: Border(
+                    right: BorderSide(
+                      color: Colors.white.withOpacity(0.1),
+                    ),
+                  ),
+                ),
+                child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -47,7 +62,6 @@ class HomeScreen extends StatelessWidget {
                   CountdownWidget(
                     title: 'Current Time',
                     countdown: timerController.currentTime,
-                    color: Theme.of(context).colorScheme.secondaryContainer,
                   ),
                   const SizedBox(height: 16),
                   CountdownWidget(
@@ -143,6 +157,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ],
+        ),
       ),
     );
   }

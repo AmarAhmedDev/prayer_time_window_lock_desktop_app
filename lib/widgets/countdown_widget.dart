@@ -15,7 +15,7 @@ class CountdownWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: color ?? Theme.of(context).colorScheme.primaryContainer,
+      color: color,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         child: Column(
