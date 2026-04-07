@@ -1,6 +1,6 @@
 class AppConstants {
   static const String appName = 'Prayer Time Sleep Assistant';
-  static const String appSubtitle = 'Automatically sleep your PC when prayer time arrives';
+  static const String appSubtitle = 'Automate your PC sleep cycles with prayer times';
   
   // Storage Keys
   static const String keyPrayerTimes = 'prayer_times';
