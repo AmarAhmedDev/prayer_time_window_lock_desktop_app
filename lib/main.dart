@@ -90,6 +90,8 @@ void main() async {
     await windowManager.waitUntilReadyToShow(windowOptions, () async {
       await windowManager.show();
       await windowManager.focus();
+      await windowManager.setResizable(false);
+      await windowManager.setMaximizable(false);
     });
 
     // Prevent window closing, instead minimize to tray
