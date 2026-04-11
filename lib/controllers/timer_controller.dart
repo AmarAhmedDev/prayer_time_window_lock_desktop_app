@@ -8,7 +8,6 @@ class TimerController extends ChangeNotifier {
   Timer? _timer;
   String _currentTime = '';
   String _countdownText = '';
-  int _lastCheckedMinute = -1;
 
   TimerController(this._prayerController) {
     _startTimer();
@@ -18,7 +17,6 @@ class TimerController extends ChangeNotifier {
   String get countdownText => _countdownText;
 
   void _startTimer() {
-    // Run an initial check immediately on startup
     _tick();
 
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
@@ -32,15 +30,8 @@ class TimerController extends ChangeNotifier {
 
     _updateCountdown(now);
 
-    // Check every second for the 30-second warning notification
-    _prayerController.checkPrayerWarning(now);
-
-    // Check for prayer time match on every minute change
-    final currentMinute = now.hour * 60 + now.minute;
-    if (currentMinute != _lastCheckedMinute) {
-      _lastCheckedMinute = currentMinute;
-      _prayerController.checkPrayers();
-    }
+    // Check every second — handles both 30s warning and 0s sleep trigger
+    _prayerController.checkPrayers(now);
 
     notifyListeners();
   }

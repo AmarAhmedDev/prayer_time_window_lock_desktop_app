@@ -12,14 +12,14 @@ class PrayerController extends ChangeNotifier {
 
   List<PrayerTimeModel> _prayers = [];
   bool _isMonitoring = false;
-  String? _lastTriggeredPrayer;
-  String? _lastTriggeredDate;
   bool _isStartupEnabled = false;
   bool _isReminderSoundEnabled = true;
   bool _isTriggerInProgress = false;
 
-  // Track which prayers have already received a 30-second warning today
-  // Key format: "prayerName_yyyy-MM-dd"
+  // Per-prayer tracking: maps "prayerName" -> "time_date" that was triggered
+  final Map<String, String> _triggeredPrayers = {};
+
+  // Track which prayers have already received a 30-second warning
   final Set<String> _warnedPrayers = {};
 
   PrayerController(
@@ -38,10 +38,18 @@ class PrayerController extends ChangeNotifier {
   void _loadData() {
     _prayers = _storageService.getPrayerTimes();
     _isMonitoring = _storageService.getMonitoringStatus();
-    _lastTriggeredPrayer = _storageService.getLastTriggeredPrayer();
-    _lastTriggeredDate = _storageService.getLastTriggeredDate();
     _isStartupEnabled = _storageService.getStartupEnabled();
     _isReminderSoundEnabled = _storageService.getReminderSoundEnabled();
+
+    final lastPrayer = _storageService.getLastTriggeredPrayer();
+    final lastDate = _storageService.getLastTriggeredDate();
+    if (lastPrayer != null && lastDate != null) {
+      final prayer = _prayers.where((p) => p.name == lastPrayer).firstOrNull;
+      if (prayer != null) {
+        _triggeredPrayers[lastPrayer] = '${prayer.time}_$lastDate';
+      }
+    }
+
     notifyListeners();
   }
 
@@ -50,6 +58,12 @@ class PrayerController extends ChangeNotifier {
     if (index != -1) {
       _prayers[index].time = newTime;
       await _storageService.savePrayerTimes(_prayers);
+
+      // Clear triggered & warned state so updated time can trigger again
+      _triggeredPrayers.remove(name);
+      _warnedPrayers.removeWhere((key) => key.startsWith('${name}_'));
+
+      debugPrint('[PrayerController] Time updated for $name to $newTime — trigger state reset');
       notifyListeners();
     }
   }
@@ -82,109 +96,86 @@ class PrayerController extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Called every second by TimerController to check for 30-second warning.
-  /// Sends a notification when a prayer time is ~30 seconds away.
-  void checkPrayerWarning(DateTime now) {
-    if (!_isMonitoring) return;
-
-    final todayDate = DateFormat('yyyy-MM-dd').format(now);
-
-    // Clean up old warned prayers from previous days
-    _warnedPrayers.removeWhere((key) => !key.endsWith(todayDate));
-
-    for (var prayer in _prayers) {
-      if (!prayer.isEnabled) continue;
-
-      final warningKey = '${prayer.name}_$todayDate';
-
-      // Skip if already warned today for this prayer
-      if (_warnedPrayers.contains(warningKey)) continue;
-
-      // Skip if already triggered today
-      if (_lastTriggeredPrayer == prayer.name && _lastTriggeredDate == todayDate) {
-        continue;
-      }
-
-      // Calculate exact seconds until this prayer
-      final parts = prayer.time.split(':');
-      final prayerHour = int.parse(parts[0]);
-      final prayerMinute = int.parse(parts[1]);
-
-      final prayerDateTime = DateTime(
-        now.year, now.month, now.day,
-        prayerHour, prayerMinute, 0,
-      );
-
-      final secondsUntil = prayerDateTime.difference(now).inSeconds;
-
-      // Trigger warning when 25-35 seconds remain (window to catch it reliably)
-      if (secondsUntil >= 25 && secondsUntil <= 35) {
-        _warnedPrayers.add(warningKey);
-        debugPrint('[PrayerController] 30-second warning for ${prayer.name} (${secondsUntil}s remaining)');
-
-        _notificationService.showPrayerNotification(
-          '⏰ ${prayer.name} in 30 seconds!',
-          'Your PC will sleep when prayer time arrives. Prepare now!',
-        );
-        break; // Only one warning at a time
-      }
-    }
+  bool _isPrayerTriggeredToday(String name, String time, String todayDate) {
+    final key = '${time}_$todayDate';
+    return _triggeredPrayers[name] == key;
   }
 
-  /// Called on every minute change by TimerController.
-  /// Triggers sleep when prayer time matches.
-  Future<void> checkPrayers() async {
-    if (!_isMonitoring) return;
+  void _markPrayerTriggered(String name, String time, String todayDate) {
+    _triggeredPrayers[name] = '${time}_$todayDate';
+  }
 
-    // Prevent concurrent triggers
+  /// Calculate exact seconds until a prayer time from now
+  int _secondsUntilPrayer(PrayerTimeModel prayer, DateTime now) {
+    final parts = prayer.time.split(':');
+    final prayerHour = int.parse(parts[0]);
+    final prayerMinute = int.parse(parts[1]);
+
+    final prayerDateTime = DateTime(
+      now.year, now.month, now.day,
+      prayerHour, prayerMinute, 0,
+    );
+
+    return prayerDateTime.difference(now).inSeconds;
+  }
+
+  /// Called every second by TimerController.
+  /// Handles BOTH the 30-second warning and the sleep trigger.
+  Future<void> checkPrayers(DateTime now) async {
+    if (!_isMonitoring) return;
     if (_isTriggerInProgress) return;
 
-    final now = DateTime.now();
     final todayDate = DateFormat('yyyy-MM-dd').format(now);
-    final currentMinutes = now.hour * 60 + now.minute;
-
-    debugPrint('[PrayerController] Checking prayers at ${DateFormat('HH:mm:ss').format(now)}');
 
     for (var prayer in _prayers) {
       if (!prayer.isEnabled) continue;
 
-      // Smart Sleep Logic: Skip if already triggered today
-      if (_lastTriggeredPrayer == prayer.name && _lastTriggeredDate == todayDate) {
-        continue;
+      // Skip if already triggered for this specific time today
+      if (_isPrayerTriggeredToday(prayer.name, prayer.time, todayDate)) continue;
+
+      final secondsUntil = _secondsUntilPrayer(prayer, now);
+
+      // --- 30-second warning notification ---
+      // Fires exactly when countdown shows 30s or less (flag prevents duplicates)
+      final warningKey = '${prayer.name}_${prayer.time}_$todayDate';
+      if (secondsUntil <= 30 && secondsUntil > 0 && !_warnedPrayers.contains(warningKey)) {
+        _warnedPrayers.add(warningKey);
+        debugPrint('[PrayerController] ⏰ 30-second warning for ${prayer.name} (${secondsUntil}s remaining)');
+
+        // Fire-and-forget: don't await so it doesn't delay the timer tick
+        _notificationService.showPrayerNotification(
+          '⏰ ${prayer.name} in 30 seconds!',
+          'Your PC will sleep when prayer time arrives. Pause to cancel.',
+        );
       }
 
-      final prayerMinutes = _timeToMinutes(prayer.time);
-
-      // Match if current time is within a 2-minute window
-      final diff = currentMinutes - prayerMinutes;
-      if (diff >= 0 && diff <= 1) {
-        debugPrint('[PrayerController] Prayer time matched: ${prayer.name} at ${prayer.time} (diff: ${diff}min)');
-        await _triggerSleep(prayer.name, todayDate);
+      // --- Sleep trigger: countdown reached 0 ---
+      if (secondsUntil <= 0 && secondsUntil >= -60) {
+        debugPrint('[PrayerController] ✅ Countdown reached 0 for ${prayer.name} — sleeping PC now!');
+        await _triggerSleep(prayer.name, prayer.time, todayDate);
         break;
       }
     }
   }
 
-  Future<void> _triggerSleep(String prayerName, String date) async {
+  Future<void> _triggerSleep(String prayerName, String prayerTime, String date) async {
     _isTriggerInProgress = true;
 
-    _lastTriggeredPrayer = prayerName;
-    _lastTriggeredDate = date;
+    // Mark as triggered
+    _markPrayerTriggered(prayerName, prayerTime, date);
     await _storageService.setLastTriggered(prayerName, date);
-    
-    // Show notification
-    debugPrint('[PrayerController] Sending sleep notification for $prayerName...');
-    await _notificationService.showPrayerNotification(
-      '🕌 Prayer Time: $prayerName',
-      'Sleeping PC in 10 seconds...',
-    );
 
-    // Wait 10 seconds
-    await Future.delayed(const Duration(seconds: 10));
+    // Check one last time if still monitoring
+    if (!_isMonitoring) {
+      debugPrint('[PrayerController] ⏸️ Monitoring paused — sleep cancelled for $prayerName');
+      _isTriggerInProgress = false;
+      return;
+    }
 
-    // Put Windows to sleep
+    // Sleep immediately — no extra notification, no delay
+    debugPrint('[PrayerController] 💤 Putting PC to sleep for $prayerName');
     await _sleepService.sleep();
-    
+
     _isTriggerInProgress = false;
     notifyListeners();
   }
@@ -196,7 +187,6 @@ class PrayerController extends ChangeNotifier {
     List<PrayerTimeModel> enabledPrayers = _prayers.where((p) => p.isEnabled).toList();
     if (enabledPrayers.isEmpty) return null;
 
-    // Sort by time
     enabledPrayers.sort((a, b) {
       final aTime = _timeToMinutes(a.time);
       final bTime = _timeToMinutes(b.time);
@@ -209,7 +199,6 @@ class PrayerController extends ChangeNotifier {
       }
     }
 
-    // If all prayers today are passed, the next one is the first prayer of tomorrow
     return enabledPrayers.first;
   }
 
