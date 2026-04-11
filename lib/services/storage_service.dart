@@ -53,7 +53,7 @@ class StorageService {
   }
 
   bool getStartupEnabled() {
-    return _prefs.getBool(AppConstants.keyStartupEnabled) ?? false;
+    return _prefs.getBool(AppConstants.keyStartupEnabled) ?? true;
   }
 
   Future<void> setReminderSoundEnabled(bool enabled) async {
