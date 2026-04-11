@@ -14,7 +14,7 @@ class TrayService {
     required VoidCallback onExit,
     required bool isMonitoring,
   }) async {
-    if (!Platform.isWindows) return;
+    if (!Platform.isWindows && !Platform.isLinux && !Platform.isMacOS) return;
 
     try {
       final iconPath = Platform.isWindows
@@ -63,7 +63,7 @@ class TrayService {
     required VoidCallback onExit,
     required bool isMonitoring,
   }) async {
-    if (!Platform.isWindows) return;
+    if (!Platform.isWindows && !Platform.isLinux && !Platform.isMacOS) return;
 
     try {
       await _menu.buildFrom([

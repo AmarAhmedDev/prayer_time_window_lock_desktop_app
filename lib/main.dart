@@ -35,14 +35,14 @@ void main() async {
       sleepService,
     );
 
-    // Ensure Windows startup registry matches the stored preference.
-    // Critical for first install where default is ON but registry isn't set yet.
-    if (Platform.isWindows && prayerController.isStartupEnabled) {
+    // Ensure System startup matches the stored preference.
+    // Critical for first install where default is ON but registry/autostart isn't set yet.
+    if ((Platform.isWindows || Platform.isLinux || Platform.isMacOS) && prayerController.isStartupEnabled) {
       await sleepService.setStartup(true);
     }
 
     // Initialize Tray (Optional, don't let it block startup)
-    if (Platform.isWindows) {
+    if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
       trayService.init(
         onOpen: () async {
           await windowManager.show();
