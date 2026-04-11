@@ -120,7 +120,7 @@ class PrayerController extends ChangeNotifier {
   }
 
   /// Called every second by TimerController.
-  /// Handles BOTH the 30-second warning and the sleep trigger.
+  /// Handles BOTH the 10-second warning and the sleep trigger.
   Future<void> checkPrayers(DateTime now) async {
     if (!_isMonitoring) return;
     if (_isTriggerInProgress) return;
@@ -135,17 +135,17 @@ class PrayerController extends ChangeNotifier {
 
       final secondsUntil = _secondsUntilPrayer(prayer, now);
 
-      // --- 30-second warning notification ---
+      // --- 10-second warning notification ---
       // Fires exactly when countdown shows 30s or less (flag prevents duplicates)
       final warningKey = '${prayer.name}_${prayer.time}_$todayDate';
-      if (secondsUntil <= 30 && secondsUntil > 0 && !_warnedPrayers.contains(warningKey)) {
+      if (secondsUntil <= 10 && secondsUntil > 0 && !_warnedPrayers.contains(warningKey)) {
         _warnedPrayers.add(warningKey);
-        debugPrint('[PrayerController] ⏰ 30-second warning for ${prayer.name} (${secondsUntil}s remaining)');
+        debugPrint('[PrayerController] ⏰ 10-second warning for ${prayer.name} (${secondsUntil}s remaining)');
 
         // Fire-and-forget: don't await so it doesn't delay the timer tick
         _notificationService.showPrayerNotification(
-          '⏰ ${prayer.name} in 30 seconds!',
-          'Your PC will sleep when prayer time arrives. Pause to cancel.',
+          '🕌 ${prayer.name} in 10 seconds!',
+          'Your PC will sleep and Prepare for ${prayer.name} prayer'
         );
       }
 
