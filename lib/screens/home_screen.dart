@@ -6,6 +6,7 @@ import '../widgets/prayer_card.dart';
 import '../widgets/circular_countdown.dart';
 import '../widgets/mode_switch.dart';
 import '../core/constants.dart';
+import 'dart:io';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -110,7 +111,7 @@ class HomeScreen extends StatelessWidget {
 
                     // Settings Section
                     ModeSwitch(
-                      label: 'Start with Windows',
+                      label: Platform.isWindows ? 'Start with Windows' : (Platform.isMacOS ? 'Start with macOS' : 'Start with System'),
                       value: prayerController.isStartupEnabled,
                       onChanged: (value) => prayerController.toggleStartup(value),
                       icon: Icons.launch,
