@@ -16,6 +16,11 @@ class PrayerController extends ChangeNotifier {
   String? _lastTriggeredDate;
   bool _isStartupEnabled = false;
   bool _isReminderSoundEnabled = true;
+  bool _isTriggerInProgress = false;
+
+  // Track which prayers have already received a 30-second warning today
+  // Key format: "prayerName_yyyy-MM-dd"
+  final Set<String> _warnedPrayers = {};
 
   PrayerController(
     this._storageService,
@@ -77,12 +82,68 @@ class PrayerController extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Called every second by TimerController to check for 30-second warning.
+  /// Sends a notification when a prayer time is ~30 seconds away.
+  void checkPrayerWarning(DateTime now) {
+    if (!_isMonitoring) return;
+
+    final todayDate = DateFormat('yyyy-MM-dd').format(now);
+
+    // Clean up old warned prayers from previous days
+    _warnedPrayers.removeWhere((key) => !key.endsWith(todayDate));
+
+    for (var prayer in _prayers) {
+      if (!prayer.isEnabled) continue;
+
+      final warningKey = '${prayer.name}_$todayDate';
+
+      // Skip if already warned today for this prayer
+      if (_warnedPrayers.contains(warningKey)) continue;
+
+      // Skip if already triggered today
+      if (_lastTriggeredPrayer == prayer.name && _lastTriggeredDate == todayDate) {
+        continue;
+      }
+
+      // Calculate exact seconds until this prayer
+      final parts = prayer.time.split(':');
+      final prayerHour = int.parse(parts[0]);
+      final prayerMinute = int.parse(parts[1]);
+
+      final prayerDateTime = DateTime(
+        now.year, now.month, now.day,
+        prayerHour, prayerMinute, 0,
+      );
+
+      final secondsUntil = prayerDateTime.difference(now).inSeconds;
+
+      // Trigger warning when 25-35 seconds remain (window to catch it reliably)
+      if (secondsUntil >= 25 && secondsUntil <= 35) {
+        _warnedPrayers.add(warningKey);
+        debugPrint('[PrayerController] 30-second warning for ${prayer.name} (${secondsUntil}s remaining)');
+
+        _notificationService.showPrayerNotification(
+          '⏰ ${prayer.name} in 30 seconds!',
+          'Your PC will sleep when prayer time arrives. Prepare now!',
+        );
+        break; // Only one warning at a time
+      }
+    }
+  }
+
+  /// Called on every minute change by TimerController.
+  /// Triggers sleep when prayer time matches.
   Future<void> checkPrayers() async {
     if (!_isMonitoring) return;
 
+    // Prevent concurrent triggers
+    if (_isTriggerInProgress) return;
+
     final now = DateTime.now();
     final todayDate = DateFormat('yyyy-MM-dd').format(now);
-    final currentTime = DateFormat('HH:mm').format(now);
+    final currentMinutes = now.hour * 60 + now.minute;
+
+    debugPrint('[PrayerController] Checking prayers at ${DateFormat('HH:mm:ss').format(now)}');
 
     for (var prayer in _prayers) {
       if (!prayer.isEnabled) continue;
@@ -92,8 +153,12 @@ class PrayerController extends ChangeNotifier {
         continue;
       }
 
-      // Check if current time matches prayer time
-      if (prayer.time == currentTime) {
+      final prayerMinutes = _timeToMinutes(prayer.time);
+
+      // Match if current time is within a 2-minute window
+      final diff = currentMinutes - prayerMinutes;
+      if (diff >= 0 && diff <= 1) {
+        debugPrint('[PrayerController] Prayer time matched: ${prayer.name} at ${prayer.time} (diff: ${diff}min)');
         await _triggerSleep(prayer.name, todayDate);
         break;
       }
@@ -101,13 +166,16 @@ class PrayerController extends ChangeNotifier {
   }
 
   Future<void> _triggerSleep(String prayerName, String date) async {
+    _isTriggerInProgress = true;
+
     _lastTriggeredPrayer = prayerName;
     _lastTriggeredDate = date;
     await _storageService.setLastTriggered(prayerName, date);
     
     // Show notification
+    debugPrint('[PrayerController] Sending sleep notification for $prayerName...');
     await _notificationService.showPrayerNotification(
-      'Prayer Time Reached: $prayerName',
+      '🕌 Prayer Time: $prayerName',
       'Sleeping PC in 10 seconds...',
     );
 
@@ -117,6 +185,7 @@ class PrayerController extends ChangeNotifier {
     // Put Windows to sleep
     await _sleepService.sleep();
     
+    _isTriggerInProgress = false;
     notifyListeners();
   }
 
